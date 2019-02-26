@@ -1,0 +1,122 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="header.thyme::head"/>
+	<body onload="prettyPrint()">
+		<div th:replace="menu.thyme::menu"/>
+
+		<div th:replace="docmenue.thyme::docmenue"/>
+
+
+            <div class="app__main">
+            <div class="text-container">
+            <h1>IPGeolocation</h1>
+            <p>IPGeolocation provides three APIs:</p>
+            <ul>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-201812061140">IP Geolocation API</a><br />
+            IP Geolocation API can be used to get real-time and accurate geolocation for any IP address. You can geolocate your online visitors and provide them customized experience accordingly.</li>
+            <li><a href="https://ipgeolocation.io/documentation/timezone-api-201812061213">Timezone API</a><br />
+            The Timezone API can be used to get accurate, real-time date, time and timezone information.</li>
+            <li><a href="https://ipgeolocation.io/documentation/astronomy-api-201812061214">Astronomy API</a><br />
+            The Astronomy API can used to get the location-based rise and set times for the Sun and the Moon, including current position, angle, and distance of the Sun and the Moon for a date.</li>
+            </ul>
+            <p>This documentation provides complete details of features and available options in the above APIs. For information related to our IP Geolocation API Database, please <a href="https://ipgeolocation.io/contact">contact</a> our support.</p>
+            <h2>Authorization</h2>
+            <p>We provide two ways of authorization which are, by using the:</p>
+            <ul>
+            <li>API Key</li>
+            <li>Request Origin</li>
+            </ul>
+            <p>In order to use the APIs, <a href="https://ipgeolocation.io/signup">sign up</a> for a desired plan.</p>
+            <p>All of our paid plans come with 7 days free trial. We also have a free plan which gives you 1500 requests per day. We provide the same API response in our free as well as paid plans over https. <em>Response in multiple languages</em>, <em>Bulk IP Geolocation Lookup</em> and <em>Request Origin Support</em> are not available for free plans, however.</p>
+            <p>Here is an overview of both authorization methods.</p>
+            <h3>API Key</h3>
+            <p>You can make authorized requests to our API by passing API key as a query parameter. To get your API key, login to our API console and get your API key from there. We strongly discourage the use of API key in client-side JavaScript as it will expose your API key to the public.</p>
+            <p>In order to use API key in the client-side JavaScript, use the <em>Request Origin</em> approach.</p>
+            <h3>Request Origin</h3>
+            <p>This feature is available for paid plans only. The purpose of this feature is to call our API from the client-side JavaScript without using your API key.</p>
+            <p>To use this feature, go to application console and click on <code>Add New</code> button in the dashboard section. A popup will open up. Enter the domain name of the website from where you'll be making requests. If your website is https://www.example.com, you should enter <code>example.com</code> in that pop up as your request origin.</p>
+            <p>Once saved successfully, you can make requests from the main domain as well as all of the subdomains of the main website.</p>
+            <h4>Limit on No. of Request Origins</h4>
+            <p>The number of request origins is limited based on the user's plan.</p>
+            <table>
+            <thead>
+            <tr><th>Subscription Plan</th><th>No. of Request Origins</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>Bronze</td><td>1</td></tr>
+            <tr><td>Bronze+</td><td>1</td></tr>
+            <tr><td>Silver</td><td>2</td></tr>
+            <tr><td>Silver+</td><td>2</td></tr>
+            <tr><td>Gold</td><td>3</td></tr>
+            <tr><td>Platinum</td><td>3</td></tr>
+            <tr><td>Diamond</td><td>3</td></tr>
+            </tbody>
+            </table>
+            <p>To add more request origin than your limit, you can leave a message at <a href="https://ipgeolocation.io/contact">contact us</a>. Extra request origins are charged $2.5 per month each.</p>
+            <h2>Get IP</h2>
+            <p>Get IP endpoint returns the IP address of the client from where it's called. So if you call it from your server, it returns IP address of the server. If it's called from your website like using JavaScript, it will return the IP address of the person viewing your website. This endpoint does not require any authentication and you can use this endpoint without creating an account. Here is a <code>curl</code> example:</p>
+            <pre><code class="language-curl">$ curl 'https://api.ipgeolocation.io/getip'
+
+            {
+                &quot;ip&quot;: &quot;1.1.1.1&quot;
+            }
+            </code></pre>
+            <h2>JSON and XML Response Formats</h2>
+            <p>All the endpoints of IPGeolocation API can respond in JSON and XML formats, JSON is the default response format.</p>
+            <h3>XML Format</h3>
+            <p>You can get API response in XML format in two ways:</p>
+            <ol>
+            <li>Pass <strong>output=xml</strong> as a URL parameter.</li>
+            <li>Set <strong>Accept</strong> HTTP Header to <strong>application/xml</strong> or <strong>text/xml</strong>.</li>
+            </ol>
+            <p>Here are a few examples of XML response:</p>
+            <pre><code class="language-curl">$ curl 'https://api.ipgeolocation.io/ipgeo?apiKey=API_KEY&amp;ip=1.1.1.1&amp;fields=city&amp;output=xml'
+
+            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;result&gt;
+                &lt;ip&gt;1.1.1.1&lt;/ip&gt;
+                &lt;city&gt;South Brisbane&lt;/city&gt;
+            &lt;/result&gt;
+
+            $ curl 'https://api.ipgeolocation.io/ipgeo?apiKey=API_KEY&amp;ip=1.1.1.1&amp;fields=currency' -H 'Accept: text/xml'
+
+            &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+            &lt;result&gt;
+                &lt;ip&gt;1.1.1.1&lt;/ip&gt;
+                &lt;currency&gt;
+                    &lt;code&gt;AUD&lt;/code&gt;
+                    &lt;name&gt;Australian Dollar&lt;/name&gt;
+                    &lt;symbol&gt;A$&lt;/symbol&gt;
+                &lt;/currency&gt;
+            &lt;/result&gt;
+            </code></pre>
+            <p>If you don't set <strong>output</strong> URL parameter or <strong>Accept</strong> header, the API will respond in JSON format.</p>
+            <h2>Security / SSL</h2>
+            <p>We take security seriously and all of our API endpoints are served over a secure HTTPS connection for all users, even if you are on the free plan.</p>
+            <h2>Rate Limits</h2>
+            <p>We don't have any daily, hourly or monthly rate limit on any of our paid plans. If you increase from your monthly quota, we'll keep serving your requests and add a surcharge amount on top of your monthly price. Surcharge rate varies from plan to plan.</p>
+            <p>We have a hard limit of 1500 requests per day on our Free plan and 100,000 requests for 7 days on trial accounts.</p>
+            <h2>API SDKs</h2>
+            <p>To facilitate the developers, we have added some SDKs for various programming languages. The detailed documentation on how to use these SDKs is available in the respective SDK's documentation page linked below.</p>
+            <p>Our SDKs are also available on Github. Feel free to help us improve them. SDKs. Following are the available SDKs:</p>
+            <ul>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-java-sdk-20180807094025">IP Geolocation API Java SDK</a></li>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-c-sharp-dot-net-sdk-201809031216">IP Geolocation API .NET SDK</a></li>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-typescript-sdk-201809051239">IP Geolocation API Typescript SDK</a></li>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-javascript-sdk-201809051421">IP Geolocation API Javascript SDK</a></li>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-php-sdk-201809051255">IP Geolocation API PHP SDK</a></li>
+            <li><a href="https://ipgeolocation.io/documentation/ip-geolocation-api-jquery-sdk-201809051507">IP Geolocation API JQuery SDK</a></li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+
+
+	<div th:replace="footer.thyme::footer"></div>
+    </body>
+</html>

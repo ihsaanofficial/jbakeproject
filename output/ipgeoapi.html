@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="utf-8"/>
+	    <title>IP Geo API</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta name="description" content=""/>
+	    <meta name="author" content=""/>
+	    <meta name="keywords" content=""/>
+	    <meta name="generator" content="JBake"/>
+	
+	    <!-- Le styles -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+	    <link href="css/asciidoctor.css" rel="stylesheet"/>
+	    <link href="css/base.css" rel="stylesheet"/>
+	    <link href="css/prettify.css" rel="stylesheet"/>
+	    <link href="css/ipgeo.css" rel="stylesheet"/>
+	    <link href="css/pricing.css" rel="stylesheet"/>
+	    <link href="css/documentation.css" rel="stylesheet"/>
+        <link href="css/postcontent.css" rel="stylesheet"/>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="js/html5shiv.min.js"></script>
+	    <![endif]-->
+	
+	    <!-- Fav and touch icons -->
+	    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
+	    <link rel="shortcut icon" href="favicon.ico"/>
+	</head>
+	<body onload="prettyPrint()">
+		<div>
+
+
+
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+    <div class="navbar__inner">
+    <a class="navbar__logo" href="index.html" >
+    <img src="img/ipgeolocation-logo.png" class="expanded__image" alt="IPGeolocation API">
+    </a>
+    <nav class="navbar__menu">
+    <ul>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="documentation.html">Documentation</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">Sign Up</a></li>
+    <li>
+    <a href="about.html">
+    Sign In
+    </a>
+    </li>
+    </ul>
+    </nav>
+    <div class="navbar__menu-mob">
+    <a id='toggle'>
+    </a>
+    </div>
+    </div>
+    </div>
+    <nav class="nav__mobile"></nav>
+    </div>
+    	</div>
+
+		<div>
+
+<div class="page__header">
+<div class="hero__overlay hero__overlay--gradient"></div>
+<div class="hero__mask"></div>
+<div class="page__header__inner">
+<div class="container">
+<div class="page__header__content">
+<div class="page__header__content__inner" id='navConverter'>
+<div class="page__header__title">API Documentation</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="app">
+<div class="container">
+ <div class="app__inner">
+<div class="app__menu">
+<ul class="vMenu">
+<li><a href="Overview.html">
+Overview
+</a>
+</li>
+<li>
+<a href="ipgeoapi.html">IP Geolocation API</a>
+</li>
+<li>
+<a href="/documentation/timezone-api-201812061213">Timezone API</a>
+</li>
+<li>
+<a href="/documentation/astronomy-api-201812061214">Astronomy API</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-java-sdk-20180807094025">IP Geolocation API Java SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-asp-netc-sdk-201811300756">IP Geolocation API ASP .NET/C# SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-php-sdk-201809051255">IP Geolocation API PHP SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-typescript-sdk-201809051239">IP Geolocation API Typescript SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-javascript-sdk-201809051421">IP Geolocation API Javascript SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-jquery-sdk-201809051507">IP Geolocation API JQuery SDK</a>
+</li>
+</ul>
+</div>
+
+
+
+  	
+
+
+
+    <div class="app__main">
+        <div class="text-container">
+        <div><h1>IP Geolocation API JQuery SDK</h1>
+<p>In this document, you will go through the basic steps to use IP Geolocation API JQuery SDK.<br />
+You need a valid 'IPGeolocation API key' to use this SDK. <a href="https://ipgeolocation.io/signup">Sign up</a> here and get your free API key if you don’t have one.</p>
+<h2>System Requirements</h2>
+<p>Internet connection is required to run this component.</p>
+<h2>Installation</h2>
+<h3>CDN Link</h3>
+<p>Add the following script in your HTML page:</p>
+<pre><code class="language-html">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.0.6/ipgeolocation.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<h2>Geolocation Lookup</h2>
+<p>You can use this SDK without an API key if you're using the <em>Request Origin</em> feaure on IP Geolocation API.<br />
+Here are a few different ways of querying Geolocation for an IP address from IP Geolocation API.</p>
+<pre><code class="language-javascript">// Function to handle the response from IP Geolocation API.
+// &quot;response&quot; is a JSON object returned from IP Geolocation API.
+function handleResponse(response) {
+    console.log(response);
+}
+
+// Get geolocation for the calling machine's IP address with an API key (optional, if you're using &quot;Request Origin&quot; feature at IP Geolocation API)
+getGeolocation(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Don't pass the API key if you're using the &quot;Request Origin&quot; feature at IP Geolocation API
+getGeolocation(handleResponse);
+
+// Toggle API calls' async behavior. By default, async is true.
+setAsync(false)
+
+// Get geolocation for an IP address &quot;1.1.1.1&quot;
+setIPAddressParameter(&quot;1.1.1.1&quot;);
+getGeolocation(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Get geolocation for an IP address &quot;1.1.1.1&quot; in Russian language **
+setLanguageParameter(&quot;ru&quot;);
+setIPAddressParameter(&quot;1.1.1.1&quot;);
+getGeolocation(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Get the specific geolocation fields &quot;country_code2,time_zone,currency&quot; for the calling machine's IP address
+setFieldsParameter(&quot;geo,time_zone,currency&quot;);
+getGeolocation(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Get the specified geolocaiton fields like &quot;country_code2,time_zone,currency&quot; for an IP address &quot;1.1.1.1&quot; and skip the &quot;ip&quot; field in the response
+setFieldsParameter(&quot;geo,time_zone,currency&quot;);
+setIPAddressParameter(&quot;1.1.1.1&quot;);
+setExcludesParameter(&quot;ip&quot;);
+getGeolocation(handleResponse, &quot;YOUR_API_KEY&quot;);
+</code></pre>
+<h2>Time Zone API</h2>
+<p>Here are a few examples to query Time Zone information from Timezone API.</p>
+<pre><code class="language-javascript">// Function to handle the response from IP Geolocation API.
+// &quot;response&quot; is a JSON object returned from IP Geolocation API.
+function handleResponse(response) {
+    console.log(response);
+}
+
+// Get time zone information for the calling machine's IP address with an API key (optional, if you're using &quot;Request Origin&quot; feature at IP Geolocation API)
+getTimezone(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Don't pass the API key if you're using the &quot;Request Origin&quot; feature at IP Geolocation API
+getTimezone(handleResponse);
+
+// Toggle API calls' async behavior. By default, async is true.
+setAsync(false)
+
+// Get time zone information for an IP address &quot;1.1.1.1&quot; and geolocation information in Italian language **
+setIPAddressParameter(&quot;1.1.1.1&quot;);
+setLanguageParameter(&quot;it&quot;);
+getTimezone(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Get time zone infomration for a time zone &quot;America/New_York&quot;
+setTimezoneParameter(&quot;America/Los_Angeles&quot;);
+getTimezone(handleResponse, &quot;YOUR_API_KEY&quot;);
+
+// Get time zone information by coordinates of the location
+setCoordinatesParameter(&quot;31.4816&quot;, &quot;74.3551&quot;);
+getTimezone(handleResponse, &quot;YOUR_API_KEY&quot;);
+</code></pre>
+<h2>Example</h2>
+<p>Here is a sample code to use IP Geolocation API using JQuery SDK:</p>
+<pre><code class="language-javascript">&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/ip-geolocation-api-jquery-sdk@1.0.5/ipgeolocation.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+    var ip = sessionStorage.getItem(&quot;ip&quot;);
+    var country_name = sessionStorage.getItem(&quot;country_name&quot;);
+    var country_code2 = sessionStorage.getItem(&quot;country_code2&quot;);
+            
+    if (!ip || !country_name || !country_code2) {
+        setAsync(false);
+        setFieldsParameter(&quot;country_name,country_code2&quot;);
+        getGeolocation(handleGeolocationResponse, &quot;YOUR_API_KEY&quot;);
+    }
+
+    function handleGeolocationResponse(json) {
+        ip = json.ip;
+        country_name = json.country_name;
+        country_code2 = json.country_code2;
+
+        sessionStorage.setItem(&quot;ip&quot;, ip);
+        sessionStorage.setItem(&quot;country_name&quot;, country_name);
+        sessionStorage.setItem(&quot;country_code2&quot;, country_code2);
+    }
+                
+    $(document).ready(function() {
+        alert(&quot;Hello &quot; + country_name + &quot;!&quot;);
+    });
+&lt;/script&gt;
+</code></pre>
+<p>** IPGeolocation provides geolocation information in the following languages:<br />
+* English (en)<br />
+* German (de)<br />
+* Russian (ru)<br />
+* Japanese (ja)<br />
+* French (fr)<br />
+* Chinese Simplified (cn)<br />
+* Spanish (es)<br />
+* Czech (cs)<br />
+* Italian (it)</p>
+<p>By default, geolocation information is returned in English. Response in a language other than English is available to paid users only.</p>
+<h2>Source Code</h2>
+<p>The complete source code for this SDK is avaliable at <a href="https://github.com/IPGeolocation/ip-geolocation-api-jQuery-sdk">Github</a>.</p>
+</div>
+     </div>
+         </div>
+         </div>
+         </div>
+         </div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+	<body>
+	<div th:fragment="menu">
+
+
+
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+    <div class="navbar__inner">
+    <a class="navbar__logo" th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'index.html'" >
+    <img src="img/ipgeolocation-logo.png" class="expanded__image" alt="IPGeolocation API">
+    </a>
+    <nav class="navbar__menu">
+    <ul>
+    <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'pricing.html'">Pricing</a></li>
+    <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'documentation.html'">Documentation</a></li>
+    <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'blog.html'">Blog</a></li>
+    <li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'about.html'">Sign Up</a></li>
+    <li>
+    <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'about.html'">
+    Sign In
+    </a>
+    </li>
+    </ul>
+    </nav>
+    <div class="navbar__menu-mob">
+    <a id='toggle'>
+    </a>
+    </div>
+    </div>
+    </div>
+    <nav class="nav__mobile"></nav>
+    </div>
+    	</div>
+  	</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	    <meta charset="utf-8"/>
+	    <title>Pricing</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	    <meta name="description" content=""/>
+	    <meta name="author" content=""/>
+	    <meta name="keywords" content=""/>
+	    <meta name="generator" content="JBake"/>
+	
+	    <!-- Le styles -->
+	    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+	    <link href="css/asciidoctor.css" rel="stylesheet"/>
+	    <link href="css/base.css" rel="stylesheet"/>
+	    <link href="css/prettify.css" rel="stylesheet"/>
+	    <link href="css/ipgeo.css" rel="stylesheet"/>
+	    <link href="css/pricing.css" rel="stylesheet"/>
+	    <link href="css/documentation.css" rel="stylesheet"/>
+        <link href="css/postcontent.css" rel="stylesheet"/>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	    <!--[if lt IE 9]>
+	      <script src="js/html5shiv.min.js"></script>
+	    <![endif]-->
+	
+	    <!-- Fav and touch icons -->
+	    <!--<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"/>
+	    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"/>-->
+	    <link rel="shortcut icon" href="favicon.ico"/>
+	</head>
+	<body onload="prettyPrint()">
+
+		<div>
+
+
+
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+    <div class="navbar__inner">
+    <a class="navbar__logo" href="index.html" >
+    <img src="img/ipgeolocation-logo.png" class="expanded__image" alt="IPGeolocation API">
+    </a>
+    <nav class="navbar__menu">
+    <ul>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="documentation.html">Documentation</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="about.html">Sign Up</a></li>
+    <li>
+    <a href="about.html">
+    Sign In
+    </a>
+    </li>
+    </ul>
+    </nav>
+    <div class="navbar__menu-mob">
+    <a id='toggle'>
+    </a>
+    </div>
+    </div>
+    </div>
+    <nav class="nav__mobile"></nav>
+    </div>
+    	</div>
+
+
+			<div>
+
+
+<div class="app">
+    <div class="app__inner">
+        <div class="app__main">
+            <h1 class="page__title">
+                Pricing
+            </h1>
+            <div class="plan-switcher">
+                <div class="pricing-container p5">
+                    <div class="pricing-switcher">
+                        <p class="fieldset">
+                            <input type="radio" name="duration" value="monthly" id="monthly" checked onchange="if (!window.__cfRLUnblockHandlers) return false; jQuery.ajax({type:'POST', url:'/pricing/updatePlans/0',success:function(data,textStatus){jQuery('#plans').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                            <label for="monthly">
+                                Monthly Billing
+                            </label>
+                            <input type="radio" name="duration" value="yearly" id="annual" onchange="if (!window.__cfRLUnblockHandlers) return false; jQuery.ajax({type:'POST', url:'/pricing/updatePlans/1',success:function(data,textStatus){jQuery('#plans').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                            <label for="annual">
+                                Annual Billing
+                            </label>
+                            <span class="switch"></span>
+                        </p>
+                        <p class="save-big">
+                            Save <span>big</span> by paying annually!
+                            <img src="img/finger-pointing.png" alt="Plan Selection">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="plans">
+                <div id="basicPlansBox" class="steps landing__section plans">
+                    <div class="plan-inner-row">
+                        <div class="steps__inner plan-main-area">
+                            <div class="step">
+                                <div class="plan-header">
+                                    <h2 class="plan_name">
+                                        bronze
+                                    </h2>
+                                    <h3 class="plan_rate">
+                                        $15
+                                        <strong class="plan_period capitalize__text">
+                                            Per month *
+                                        </strong>
+                                    </h3>
+                                </div>
+                                <div class="plan_specs capitalize__text">
+                                    <h4>
+                                        150K Requests Per month
+                                    </h4>
+                                </div>
+                                <div class="plan_surcharges">
+                                    <small>
+                                        $5 Per Extra 50K Requests
+                                    </small>
+                                </div>
+                                <div class="center plan_action">
+                                    <button type="button" class="button button__primary" onclick="if (!window.__cfRLUnblockHandlers) return false; buy_plan('526452')" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                                        Start 7 Days Trial
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="plan-header">
+                                    <h2 class="plan_name">
+                                        bronze+
+                                    </h2>
+                                    <h3 class="plan_rate">
+                                        $30
+                                        <strong class="plan_period capitalize__text">
+                                            Per month *
+                                        </strong>
+                                    </h3>
+                                </div>
+                                <div class="plan_specs capitalize__text">
+                                    <h4>
+                                        300K Requests Per month
+                                    </h4>
+                                </div>
+                                <div class="plan_surcharges">
+                                    <small>
+                                        $5 Per Extra 50K Requests
+                                    </small>
+                                </div>
+                                <div class="center plan_action">
+                                    <button type="button" class="button button__primary" onclick="if (!window.__cfRLUnblockHandlers) return false; buy_plan('533972')" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                                        Start 7 Days Trial
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="plan-header">
+                                    <h2 class="plan_name">
+                                        silver
+                                    </h2>
+                                    <h3 class="plan_rate">
+                                        $65
+                                        <strong class="plan_period capitalize__text">
+                                            Per month *
+                                        </strong>
+                                    </h3>
+                                </div>
+                                <div class="plan_specs capitalize__text">
+                                    <h4>
+                                        1M Requests Per month
+                                    </h4>
+                                </div>
+                                <div class="plan_surcharges">
+                                    <small>
+                                        $5 Per Extra 75K Requests
+                                    </small>
+                                </div>
+                                <div class="center plan_action">
+                                    <button type="button" class="button button__primary" onclick="if (!window.__cfRLUnblockHandlers) return false; buy_plan('526458')" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                                        Start 7 Days Trial
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="proPlansBox" class="steps landing__section plans bigger__plans">
+                    <div class="plan-inner-row">
+                        <div class="steps__inner plan-main-area">
+
+                            <div class="step">
+                                <div class="plan-header">
+                                    <h2 class="plan_name">
+                                        silver+
+                                    </h2>
+                                    <h3 class="plan_rate">
+                                        $130
+                                        <strong class="plan_period capitalize__text">
+                                            Per month *
+                                        </strong>
+                                    </h3>
+                                </div>
+                                <div class="plan_specs capitalize__text">
+                                    <h4>
+                                        3M Requests Per month
+                                    </h4>
+                                </div>
+                                <div class="plan_surcharges">
+                                    <small>
+                                        $5 Per Extra 100K Requests
+                                    </small>
+                                </div>
+                                <div class="center plan_action">
+                                    <button type="button" class="button button__primary" onclick="if (!window.__cfRLUnblockHandlers) return false; buy_plan('533974')" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                                        Start 7 Days Trial
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="plan-header">
+                                    <h2 class="plan_name">
+                                        gold
+                                    </h2>
+                                    <h3 class="plan_rate">
+                                        $200
+                                        <strong class="plan_period capitalize__text">
+                                            Per month *
+                                        </strong>
+                                    </h3>
+                                </div>
+                                <div class="plan_specs capitalize__text">
+                                    <h4>
+                                        6M Requests Per month
+                                    </h4>
+                                </div>
+                                <div class="plan_surcharges">
+                                    <small>
+                                        $5 Per Extra 125K Requests
+                                    </small>
+                                </div>
+                                <div class="center plan_action">
+                                    <button type="button" class="button button__primary" onclick="if (!window.__cfRLUnblockHandlers) return false; buy_plan('526459')" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                                        Start 7 Days Trial
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="plan-header">
+                                    <h2 class="plan_name">
+                                        platinum
+                                    </h2>
+                                    <h3 class="plan_rate">
+                                        $500
+                                        <strong class="plan_period capitalize__text">
+                                            Per month *
+                                        </strong>
+                                    </h3>
+                                </div>
+                                <div class="plan_specs capitalize__text">
+                                    <h4>
+                                        20M Requests Per month
+                                    </h4>
+                                </div>
+                                <div class="plan_surcharges">
+                                    <small>
+                                        $5 Per Extra 150K Requests
+                                    </small>
+                                </div>
+                                <div class="center plan_action">
+                                    <button type="button" class="button button__primary" onclick="if (!window.__cfRLUnblockHandlers) return false; buy_plan('526460')" data-cf-modified-e36a3732cf27078f07f190ec-="">
+                                        Start 7 Days Trial
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="center">
+                        <small>* VAT is not included.</small>
+                    </p>
+                </div>
+                <div class="enterprise__signup">
+                    <div class="container">
+                        <h3>Enterprise Solution</h3>
+                        <p>
+                            Need more than 20M requests per month, any other special requirements, or buy our IP Geolocation Lookup database.
+                        </p>
+                        <a class="link button button__primary" href="/contact">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+                <div class="free_signup center">
+                    <div class="container">
+                        <h3>Try our Service for Free</h3>
+                        <p>
+                            You will get 1500 requests per day for free to use our API for non-commercial use or to test things out.
+                        </p>
+                        <a class="link" href="/signup">
+                            Sign up for Free Plan
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+	<div>
+			<div id="push"></div>
+    
+		    <div id="footer">
+		      <div class="footer footer--dark">
+              <div class="container">
+              <div class="footer__inner">
+              <a href="index.html" class="footer__textLogo">
+              <img src="img/ipgeolocation-logo.png" alt="footer_logo_ipgeolocation" />
+              </a>
+              <div class="footer__data">
+              <div class="footer__data__item">
+              <div class="footer__row">
+              <a href="pricing.html" class="footer__link">
+              Pricing
+              </a>
+              </div>
+              <div class="footer__row">
+              <a href="documentation.html" class="footer__link">
+              Documentation
+              </a>
+              </div>
+              <div class="footer__row">
+              <a href="signup.html" class="footer__link">
+              Sign Up
+              </a>
+              </div>
+              <div class="footer__row">
+              <a href="signin.html" class="footer__link">
+              Sign in
+              </a>
+              </div>
+              </div>
+              <div class="footer__data__item">
+              <div class="footer__row">
+              <a href="apistatus.html" class="footer__link">
+              API Status
+              </a>
+              </div>
+              <div class="footer__row">
+             <a href="getintouch.html" class="footer__link">
+              Get in Touch
+              </a>
+              </div>
+              <div class="footer__row">
+              <a href="blog.html" class="footer__link">
+              Blog
+              </a>
+              </div>
+              </div>
+              <div class="footer__data__item">
+              <div class="footer__row">
+              <a href="about.html" class="footer__link">
+              About Us
+              </a>
+              </div>
+              <div class="footer__row">
+             <a href="faqs.html" class="footer__link">
+              FAQs
+              </a>
+              </div>
+              <div class="footer__row">
+              <a href="terms.html" class="footer__link">
+              Terms
+              </a>
+              </div>
+              <div class="footer__row">
+              <a href="privacy.html" class="footer__link">
+              Privacy
+              </a>
+              </div>
+              </div>
+              <div class="footer__data__item">
+              <div class="footer__row social-area">
+              <a href="https://github.com/IPGeolocation" target="_blank" class="footer__link">
+              <img src="img/github.svg" alt="github_ipgeolocation" />
+              </a>
+              <a href="https://twitter.com/ipgeolocationio" target="_blank" class="footer__link">
+              <img src="img/twitter.svg" alt="twitter_ipgeolocation" />
+              </a>
+              </div>
+              <div class="footer__row">
+              Copyright &copy; 2019 ipgeolocation
+              </div>
+              <div class="footer__row">
+              Made with <span class="heart">&#9829;</span> in Lahore, Pakistan
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+	    
+		    <!-- Le javascript
+		    ================================================== -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+		    <script src="js/jquery-1.11.1.min.js"></script>
+		    <script src="js/bootstrap.min.js"></script>
+		    <script src="js/prettify.js"></script>
+		    <link href="css/ipgeo.css" rel="stylesheet"/>
+    
+    	</div>
+  	
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<body>
+		<div th:fragment="footer">
+			<div id="push"></div>
+    
+		    <div id="footer">
+		      <div class="footer footer--dark">
+              <div class="container">
+              <div class="footer__inner">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'index.html'" class="footer__textLogo">
+              <img src="img/ipgeolocation-logo.png" alt="footer_logo_ipgeolocation" />
+              </a>
+              <div class="footer__data">
+              <div class="footer__data__item">
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'pricing.html'" class="footer__link">
+              Pricing
+              </a>
+              </div>
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'documentation.html'" class="footer__link">
+              Documentation
+              </a>
+              </div>
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'signup.html'" class="footer__link">
+              Sign Up
+              </a>
+              </div>
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'signin.html'" class="footer__link">
+              Sign in
+              </a>
+              </div>
+              </div>
+              <div class="footer__data__item">
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'apistatus.html'" class="footer__link">
+              API Status
+              </a>
+              </div>
+              <div class="footer__row">
+             <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'getintouch.html'" class="footer__link">
+              Get in Touch
+              </a>
+              </div>
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'blog.html'" class="footer__link">
+              Blog
+              </a>
+              </div>
+              </div>
+              <div class="footer__data__item">
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'about.html'" class="footer__link">
+              About Us
+              </a>
+              </div>
+              <div class="footer__row">
+             <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'faqs.html'" class="footer__link">
+              FAQs
+              </a>
+              </div>
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'terms.html'" class="footer__link">
+              Terms
+              </a>
+              </div>
+              <div class="footer__row">
+              <a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'privacy.html'" class="footer__link">
+              Privacy
+              </a>
+              </div>
+              </div>
+              <div class="footer__data__item">
+              <div class="footer__row social-area">
+              <a href="https://github.com/IPGeolocation" target="_blank" class="footer__link">
+              <img src="img/github.svg" alt="github_ipgeolocation" />
+              </a>
+              <a href="https://twitter.com/ipgeolocationio" target="_blank" class="footer__link">
+              <img src="img/twitter.svg" alt="twitter_ipgeolocation" />
+              </a>
+              </div>
+              <div class="footer__row">
+              Copyright &copy; 2019 ipgeolocation
+              </div>
+              <div class="footer__row">
+              Made with <span class="heart">&#9829;</span> in Lahore, Pakistan
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+	    
+		    <!-- Le javascript
+		    ================================================== -->
+		    <!-- Placed at the end of the document so the pages load faster -->
+		    <script th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:src="${rootpath} + 'js/jquery-1.11.1.min.js'"></script>
+		    <script th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:src="${rootpath} + 'js/bootstrap.min.js'"></script>
+		    <script th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:src="${rootpath} + 'js/prettify.js'"></script>
+		    <link th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+ 'css/ipgeo.css'" rel="stylesheet"/>
+    
+    	</div>
+  	</body>
+</html>

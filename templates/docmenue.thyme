@@ -1,0 +1,63 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<body>
+
+	<div th:fragment="docmenue">
+
+<div class="page__header">
+<div class="hero__overlay hero__overlay--gradient"></div>
+<div class="hero__mask"></div>
+<div class="page__header__inner">
+<div class="container">
+<div class="page__header__content">
+<div class="page__header__content__inner" id='navConverter'>
+<div class="page__header__title">API Documentation</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="app">
+<div class="container">
+ <div class="app__inner">
+<div class="app__menu">
+<ul class="vMenu">
+<li><a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'Overview.html'">
+Overview
+</a>
+</li>
+<li>
+<a th:with="rootpath=(${content.rootpath != null} ? ${content.rootpath} : '')" th:href="${rootpath}+'ipgeoapi.html'">IP Geolocation API</a>
+</li>
+<li>
+<a href="/documentation/timezone-api-201812061213">Timezone API</a>
+</li>
+<li>
+<a href="/documentation/astronomy-api-201812061214">Astronomy API</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-java-sdk-20180807094025">IP Geolocation API Java SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-asp-netc-sdk-201811300756">IP Geolocation API ASP .NET/C# SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-php-sdk-201809051255">IP Geolocation API PHP SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-typescript-sdk-201809051239">IP Geolocation API Typescript SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-javascript-sdk-201809051421">IP Geolocation API Javascript SDK</a>
+</li>
+<li>
+<a href="/documentation/ip-geolocation-api-jquery-sdk-201809051507">IP Geolocation API JQuery SDK</a>
+</li>
+</ul>
+</div>
+
+
+
+  	</body>
+</html>
